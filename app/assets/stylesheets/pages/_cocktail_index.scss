@@ -1,0 +1,17 @@
+body {
+  background-image: asset-url('general-background');
+  background-size: cover;
+  color: rgb(254, 237, 215);
+}
+
+.bg {
+  background-color: rgba(34, 20, 8, 0.5);
+}
+
+a {
+  color: $orange;
+  background-color: rgba(34, 20, 8, 0.3);
+  &:hover {
+    color: $yellow;
+  }
+}

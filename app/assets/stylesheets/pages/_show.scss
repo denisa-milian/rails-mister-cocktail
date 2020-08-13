@@ -1,0 +1,21 @@
+.show-container {
+  background-color: rgba(34, 20, 8, 0.5);
+}
+
+.container.show-container {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  height: 50vh;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25vh;
+}
+
+#cocktail-ingredients {
+  list-style: none;
+  padding: 10px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
