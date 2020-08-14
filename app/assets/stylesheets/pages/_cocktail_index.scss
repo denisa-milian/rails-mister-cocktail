@@ -1,17 +1,49 @@
 body {
-  background-image: asset-url('general-background');
+  // background-image: asset-url('general-background');
+  // background-image: asset-url('general-background2');
+  background-image: asset-url('general-background3');
   background-size: cover;
   color: rgb(254, 237, 215);
 }
 
 .bg {
-  background-color: rgba(34, 20, 8, 0.5);
+  background-color: rgba(254, 237, 215, 0.5);
+  background: linear-gradient(90deg, rgba(221,193,158,0.3) 2%, rgba(203,119,72,0.3) 48%, rgba(7,6,2,0.5) 93%);
+  border-left-style: 1px solid rgba(255,255,255,0.8);
 }
 
 a {
   color: $orange;
-  background-color: rgba(34, 20, 8, 0.3);
+  // background-color: rgba(34, 20, 8, 0.3);
   &:hover {
     color: $yellow;
+    text-decoration: none;
   }
+}
+
+a.cocktail-edit {
+    font-size: 16px;
+    color: white;
+  }
+
+#card-background{
+  background-color: rgba(66, 28, 14, 0.3);
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+h1.title {
+  color: $orange;
+}
+
+#index-title {
+  font-family: 'Lovers Quarrel', cursive;
+  color: rgba(203, 119, 72, 0.8);
+  font-size: 150px;
+  position: relative;
+}
+#index-add-link {
+  position: absolute;
+  top: 140px;
+  color: rgba(203, 119, 72, 0.8);
 }

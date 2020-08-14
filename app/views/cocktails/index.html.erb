@@ -1,14 +1,17 @@
-<div class="text-center p-5">
-  <h1>Cocktails </h1>
-  <%= link_to "Add", new_cocktail_path %>
+<div class="text-center pb-5">
+  <h1 id="index-title">Cocktails </h1>
+  <%= link_to "Add", new_cocktail_path, id: "index-add-link" %>
 </div>
 <div class="container bg">
   <div class="row">
     <% @cocktails.each do |c| %>
     <div class="col-sm-6 col-lg-4 my-3">
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1542895324-076f3fb6c2cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80')">
-        <%= link_to c.name, cocktail_path(c) %> | <%= link_to 'Edit', edit_cocktail_path(c) %>
-      </div>
+      <% if c.photo.attached? %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(<%= cl_image_path c.photo.key, height: 250 %>)">
+          <div id="card-background"> <%= link_to c.name, cocktail_path(c), class: 'cocktail-title' %> |
+          <%= link_to 'Edit', edit_cocktail_path(c), class: 'cocktail-edit' %> </div>
+        </div>
+      <% end %>
     </div>
     <% end %>
   </div>

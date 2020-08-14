@@ -1,7 +1,9 @@
 <div class="container show-container">
+  <div class="cocktail-img" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(<%= cl_image_path @cocktail.photo.key %>)">
+  </div>
+  <div>
   <h1>
     <%= @cocktail.name %>
-
   </h1>
   <p> <%= link_to 'Edit', edit_cocktail_path(@cocktail),
     class: "btn btn-success" %>
@@ -15,10 +17,11 @@
         dose_path(dose.id),
         method: :delete,
         data: { confirm: "Are you sure?" },
-        class: "text-success" %>
+        class: "text-warning" %>
       </li>
     <% end %>
   </ul>
 
   <%= link_to 'Back to the list', cocktails_path, class: "btn btn-warning" %>
+</div>
 </div>
