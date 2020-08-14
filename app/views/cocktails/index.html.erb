@@ -1,18 +1,22 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path 'cocktail-home' %>)">
 <div class="text-center pb-5">
-  <h1 id="index-title">Cocktails </h1>
-  <%= link_to "Add", new_cocktail_path, id: "index-add-link" %>
+    <h1 id="index-title">Cocktails </h1>
+    <%= link_to "Add", new_cocktail_path, class: 'btn btn-warning' %>
+  </div>
 </div>
-<div class="container bg">
+
+<div class="container">
   <div class="row">
     <% @cocktails.each do |c| %>
-    <div class="col-sm-6 col-lg-4 my-3">
+    <div class="col-sm-6 col-lg-3 my-3">
       <% if c.photo.attached? %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(<%= cl_image_path c.photo.key, height: 250 %>)">
-          <div id="card-background"> <%= link_to c.name, cocktail_path(c), class: 'cocktail-title' %> |
-          <%= link_to 'Edit', edit_cocktail_path(c), class: 'cocktail-edit' %> </div>
-        </div>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(<%= cl_image_path c.photo.key, height: 250 %>)">
+          <%= link_to c.name, cocktail_path(c), class: 'cocktail-title' %> </div>
       <% end %>
     </div>
     <% end %>
   </div>
+</div>
+
+<div class="container">
 </div>

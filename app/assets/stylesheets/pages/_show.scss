@@ -1,7 +1,3 @@
-.show-container {
-  background-color: rgba(34, 20, 8, 0.7);
-}
-
 .container.show-container {
   display: flex;
   // flex-direction: column;
@@ -23,14 +19,13 @@
 .container.container-form {
   width: 30%;
   margin-top: 10%;
-  background-color: rgba(34, 20, 8, 0.5);
   padding: 5%;
 }
 
 .buttons-div {
   display:flex;
   justify-content: space-between;
-  flex-direction: row-reverse
+  flex-direction: row-reverse;
 }
 
 .cocktail-img {
