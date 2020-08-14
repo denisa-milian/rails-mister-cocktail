@@ -1,12 +1,12 @@
-<h1>Doses#new</h1>
-
-<div class="container">
+<div class="container container-form">
   <h1>New Ingredient</h1>
 
   <%= simple_form_for [@cocktail, @dose] do |f| %>
     <%= f.input :description %>
     <%= f.association :ingredient %>
-
-    <%= f.submit class:"btn btn-primary" %>
+  <div>
+    <%= f.submit class:"btn btn-success" %>
   <% end %>
+  <%= link_to 'Back to the list', cocktails_path, class: "btn btn-warning" %>
+  </div>
 </div>
