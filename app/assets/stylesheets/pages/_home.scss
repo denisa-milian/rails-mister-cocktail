@@ -20,9 +20,25 @@
   position: relative;
   top: 80px;
 }
+
 .container {
   display: flex-inline;
   width: 70%;
   text-align: center;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+// fadein animation
+.fade-in {
+  animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

@@ -1,19 +1,29 @@
 body {
+  background: rgb(7,6,2);
   background: linear-gradient(90deg, rgba(7,6,2,1) 10%, rgba(41,24,15,1) 50%, rgba(7,6,2,1) 90%);
   color: rgb(254, 237, 215);
 }
 
+// Link buttons
 a {
   color: rgb(254, 237, 215);
-  .cocktail-edit {
-    font-size: 16px;
-  }
+  transition: 0.5s ease-in-out;
   &:hover {
     color: $orange;
     text-decoration: none;
+    transform: scale(1.05);
   }
 }
 
+// Same effect as for the link buttons but for automatically generated submit buttons in forms
+.btn {
+  transition: 0.5s ease-in-out;
+  &:hover {
+  transform: scale(1.05);
+  }
+}
+
+// Index title styling
 #index-title {
   font-size: 150px;
 }

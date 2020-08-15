@@ -1,6 +1,6 @@
+// Container for individual cocktail
 .container.show-container {
   display: flex;
-  // flex-direction: column;
   width: 38%;
   height: 50vh;
   align-items: center;
@@ -9,6 +9,7 @@
   padding: 25px;
 }
 
+// Styling for ingredients list on individual cocktail page
 #cocktail-ingredients {
   list-style: none;
   padding: 10px;
@@ -16,18 +17,21 @@
   text-justify: inter-word;
 }
 
+// Containers applied to all form page: new, edit and add ingredient
 .container.container-form {
   width: 30%;
   margin-top: 10%;
   padding: 5%;
 }
 
+// Div to space buttons line evenly in the forms
 .buttons-div {
-  display:flex;
+  display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
 }
 
+// cocktail image in the individual cocktail page
 .cocktail-img {
   width: 200px;
   height: 200px;

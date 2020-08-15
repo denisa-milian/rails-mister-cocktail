@@ -1,6 +1,9 @@
 .navbar-lewagon {
+  display: flex;
   justify-content: space-between;
-  background: white;
+  align-items: center;
+  background: transparent;
+  position: absolute;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +12,13 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.nav-title {
+  margin: 0;
+  padding: 14px;
+  font-family: 'Lovers Quarrel', cursive;
+  font-size: 32px;
+  color: rgba(203, 119, 72, 0.3);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
