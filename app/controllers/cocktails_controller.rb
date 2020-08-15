@@ -1,5 +1,6 @@
 class CocktailsController < ApplicationController
   before_action :find_cocktail, only: [:show, :edit, :update]
+
   def home
   end
 
