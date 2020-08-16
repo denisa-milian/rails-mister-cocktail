@@ -6,7 +6,39 @@
   color: rgb(254, 237, 215);
 }
 
+// resize for titles mobile and tablet view
+@media(max-width: 576px){
+  .background {
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+  }
+  p.title {
+    font-size: 32px;
+    top: 33px;
+  }
+  p {
+    font-size: 8px;
+  }
+  h1#welcome {
+    font-size: 13px;
+    top: 54px;
+    left: -31px;
+  }
+  .container.container-home {
+    margin-top: 20vh;
+  }
+}
 
+@media(max-width: 1050px) and (min-width: 576px){
+  p.title {
+    font-size: 100px;
+    top: 55px;
+  }
+  h1#welcome {
+    top: 110px;
+  }
+}
 
 #welcome {
   position: relative;
@@ -43,34 +75,5 @@
 
   to {
     opacity: 1;
-  }
-}
-
-// resize for titles mobile and tablet view
-@media(max-width: 576px){
-  .background {
-    height: 80vh;
-    background-size: cover;
-    background-position: center;
-  }
-  p.title {
-    font-size: 60px;
-    top: 33px;
-  }
-  p {
-    font-size: 12px;
-  }
-  h1#welcome {
-    top: 64px;
-    left: -78px;
-  }
-  .container.container-home {
-    margin-top: 20vh;
-  }
-}
-
-@media(max-width: 768px){
-  p.title {
-    font-size: 130px;
   }
 }
