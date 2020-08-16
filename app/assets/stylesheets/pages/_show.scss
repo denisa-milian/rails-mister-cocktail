@@ -6,15 +6,19 @@
   align-items: center;
   justify-content: space-around;
   margin-top: 25vh;
-  padding: 25px;
+  padding: 3%;
 }
 
 // Styling for ingredients list on individual cocktail page
-#cocktail-ingredients {
+#cocktail-ingredients li {
   list-style: none;
   padding: 10px;
   text-align: justify;
   text-justify: inter-word;
+}
+
+ul {
+  padding-left: 0;
 }
 
 // Containers applied to all form page: new, edit and add ingredient
@@ -22,6 +26,11 @@
   width: 30%;
   margin-top: 10%;
   padding: 5%;
+  .required {
+    background-color: transparent;
+    border-color: rgba(254, 237, 215, 0.5);
+    color: rgba(254, 237, 215, 0.9);
+  }
 }
 
 // Div to space buttons line evenly in the forms
@@ -35,7 +44,47 @@
 .cocktail-img {
   width: 200px;
   height: 200px;
+  margin: 0.5rem;
   background-size: cover;
   background-position: center;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+// resizing for phone view
+@media(max-width: 576px) {
+  h1 {
+    font-size: 1.25rem;
+  }
+  #cocktail-ingredients {
+    font-size: 0.4rem;
+  }
+  .cocktail-image {
+    width: 45px;
+    height: 45px;
+  }
+  .container.show-container {
+    width: 80%;
+    align-items: center;
+  }
+  .container.container-form{
+    margin-top:30vh;
+    width: 70%;
+    font-size: 12px;
+  }
+  .search-input {
+    width: 5.5rem ;
+    height: 1rem ;
+    font-size: 8px;
+  }
+}
+
+@media(max-width: 768px) {
+  .container.container-form {
+    margin-top: 25vh;
+    width: 70%;
+  }
+  .container.show-container {
+    width: 80%;
+    align-items: center;
+  }
 }

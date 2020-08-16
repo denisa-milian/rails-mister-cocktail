@@ -1,9 +1,12 @@
 // Specific CSS for your home-page
 .background {
+  height: 100vh;
   background-image: asset-url('cocktail-home');
   background-size: cover;
   color: rgb(254, 237, 215);
 }
+
+
 
 #welcome {
   position: relative;
@@ -40,5 +43,34 @@
 
   to {
     opacity: 1;
+  }
+}
+
+// resize for titles mobile and tablet view
+@media(max-width: 576px){
+  .background {
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+  }
+  p.title {
+    font-size: 60px;
+    top: 33px;
+  }
+  p {
+    font-size: 12px;
+  }
+  h1#welcome {
+    top: 64px;
+    left: -78px;
+  }
+  .container.container-home {
+    margin-top: 20vh;
+  }
+}
+
+@media(max-width: 768px){
+  p.title {
+    font-size: 130px;
   }
 }

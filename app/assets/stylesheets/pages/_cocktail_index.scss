@@ -25,5 +25,18 @@ a {
 
 // Index title styling
 #index-title {
-  font-size: 150px;
+  font-size: 11vw;
+}
+
+// resizing for phone view
+@media(max-width: 576px) {
+  .btn-lg {
+    font-size: 0.5rem;
+  }
+  .btn {
+    height: 1rem;
+    width: 2rem;
+    font-size: 0.5rem;
+    padding: 0.05rem 0.2rem;
+  }
 }

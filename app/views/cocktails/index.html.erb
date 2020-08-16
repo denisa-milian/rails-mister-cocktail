@@ -1,16 +1,32 @@
 <div class="navbar-lewagon">
   <p> <%= link_to 'Mister Cocktail' , root_path, class:"nav-title"  %> <p>
+  <!-- <input type="text" id="search-query" placeholder="Search by ingredient"> -->
 </div>
 
 <div class="banner" >
   <div class="text-center pb-5">
     <h1 id="index-title"> Cocktails </h1>
-    <%= link_to "Add", new_cocktail_path, class: 'btn btn-warning' %>
+    <br>
+    <%= link_to "Add", new_cocktail_path, class: 'btn btn-warning btn-lg' %>
   </div>
 </div>
+<br>
 
-<div class="container">
-  <div class="row">
+<div class="container container-index">
+
+  <div class="search-form form-inline">
+    <%= form_tag cocktails_path, class: "form-inline", method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control search-input",
+        placeholder: "Find a cocktail" %>
+      <%= button_tag( :class => "btn btn-search") do%>
+        <i class="fa fa-search"> </i>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="row justify-content-center">
     <% @cocktails.each do |c| %>
       <div class="col-sm-6 col-lg-3 my-3">
         <% if c.photo.attached? %>
