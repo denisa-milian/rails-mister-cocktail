@@ -12,20 +12,19 @@
 </div>
 <br>
 
-<div class="container container-index">
-
-  <div class="search-form form-inline">
-    <%= form_tag cocktails_path, class: "form-inline", method: :get do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control search-input",
-        placeholder: "Find a cocktail" %>
-      <%= button_tag( :class => "btn btn-search") do%>
-        <i class="fa fa-search"> </i>
-      <% end %>
+<div class="search-form form-inline mb-4">
+  <%= form_tag cocktails_path, class: "form-inline", method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control search-input",
+      placeholder: "Find a cocktail" %>
+    <%= button_tag( :class => "btn btn-search") do%>
+      <i class="fa fa-search"> </i>
     <% end %>
-  </div>
+  <% end %>
+</div>
 
+<div class="container container-index">
   <div class="row justify-content-center">
     <% @cocktails.each do |c| %>
       <div class="col-sm-6 col-lg-3 my-3">
